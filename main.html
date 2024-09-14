@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identity Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#main {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    color: #1a73e8;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #5f6368;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1557b0;
+}
+
+#identityResult {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #e8f0fe;
+    border-radius: 4px;
+    color: #1a73e8;
+}
+
+@media (max-width: 650px) {
+    #main {
+        padding: 1rem;
+    }
+    
+    input[type="text"], button {
+        font-size: 14px;
+    }
+}
+</style>
+<body>
+
+    <div id="main" >
+    <h1>Identity Management</h1>
+
+    <div id="register">
+        <h2>Register Identity</h2>
+        <input type="text" id="attributeValue" placeholder="Attribute Value">
+        <input type="text" id="attributeType" placeholder="Attribute Type">
+        <button onclick="registerIdentity()">Register</button>
+    </div>
+
+    <div id="update">
+        <h2>Update Identity</h2>
+        <input type="text" id="updateValue" placeholder="Attribute Value">
+        <input type="text" id="updateType" placeholder="Attribute Type">
+        <button onclick="updateIdentity()">Update</button>
+    </div>
+
+    <div id="verify">
+        <h2>Verify Attribute</h2>
+        <input type="text" id="verifyAddress" placeholder="User Address">
+        <input type="text" id="verifyType" placeholder="Attribute Type">
+        <button onclick="verifyAttribute()">Verify</button>
+    </div>
+
+    <div id="get">
+        <h2>Get Identity</h2>
+        <input type="text" id="getAddress" placeholder="User Address">
+        <input type="text" id="getType" placeholder="Attribute Type">
+        <button onclick="getIdentity()">Get Attribute</button>
+        <p id="identityResult"></p>
+    </div>
+    
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

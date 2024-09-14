@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Solway&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin-top: 60px;
+        }
+
+        #header {
+            background: url("res.jpg") no-repeat center center;
+            background-size: cover;
+            color: #000;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        #header h2 {
+            font-family: 'Solway', serif;
+        }
+
+        .navbar {
+            background-color: #003366;
+            border-radius: 0;
+            border: none;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #e2e6ea;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .form-group label {
+            font-family: 'Solway', serif;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-control-label {
+            font-family: 'Solway', serif;
+        }
+
+        .card {
+            margin: 20px 0;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .btn-lg {
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background-color: #003366;
+            border-color: #003366;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+
+        .btn-primary:hover,
+        .btn-info:hover {
+            background-color: #002244;
+            border-color: #001533;
+        }
+
+        .btn-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a href="/home" class="navbar-brand"><b>HOME</b></a>
+        </div>
+    </nav>
+
+    <section id="header" class="jumbotron text-center">
+        <h2 class="display-4">Enter Your Residential Details</h2>
+    </section>
+
+    <form action='/submit-residential' method="POST">
+        <div class="container">
+            <h3>Residential Information</h3>
+
+            <div class="form-group">
+                <label for="name">
+                    <h3>Name:</h3>
+                </label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">
+                    <h3>Date of Birth:</h3>
+                </label>
+                <input type="text" id="dob" name="dob" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address-line1">
+                    <h3>Address Line 1:</h3>
+                </label>
+                <input type="text" id="address-line1" name="address-line1" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address-line2">
+                    <h3>Address Line 2:</h3>
+                </label>
+                <input type="text" id="address-line2" name="address-line2" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="city">
+                    <h3>City:</h3>
+                </label>
+                <input type="text" id="city" name="city" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="state">
+                    <h3>State:</h3>
+                </label>
+                <input type="text" id="state" name="state" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="zipcode">
+                    <h3>ZIP/Postal Code:</h3>
+                </label>
+                <input type="text" id="zipcode" name="zipcode" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">
+                    <h3>Country:</h3>
+                </label>
+                <input type="text" id="country" name="country" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">
+                    <h3>Phone Number:</h3>
+                </label>
+                <input type="text" id="phone" name="phone" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                    <h3>Email Address:</h3>
+                </label>
+                <input type="text" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="national-id">
+                    <h3>National ID Number:</h3>
+                </label>
+                <input type="text" id="national-id" name="national-id" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tax-id">
+                    <h3>Tax ID Number:</h3>
+                </label>
+                <input type="text" id="tax-id" name="tax-id" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="marital-status">
+                    <h3>Marital Status:</h3>
+                </label>
+                <select id="marital-status" name="marital-status" class="form-control" required>
+                    <option value="single">Single</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                    <option value="widowed">Widowed</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="residential-status">
+                    <h3>Residential Status:</h3>
+                </label>
+                <select id="residential-status" name="residential-status" class="form-control" required>
+                    <option value="owner">Owner</option>
+                    <option value="renter">Renter</option>
+                    <option value="living-with-family">Living with Family</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="emergency-contact">
+                    <h3>Emergency Contact Name:</h3>
+                </label>
+                <input type="text" id="emergency-contact" name="emergency-contact" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergency-phone">
+                    <h3>Emergency Contact Phone:</h3>
+                </label>
+                <input type="text" id="emergency-phone" name="emergency-phone" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="emergency-email">
+                    <h3>Emergency Contact Email:</h3>
+                </label>
+                <input type="text" id="emergency-email" name="emergency-email" class="form-control" required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                <button type="reset" class="btn btn-info btn-lg">Reset</button>
+            </div>
+        </div>
+    </form>
+    <script src="dash2.js"></script>
+</body>
+
+</html>

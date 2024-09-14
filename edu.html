@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Solway&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #f4f4f4;
+            margin-top: 60px;
+        }
+
+        #header {
+            background-image: url(edu.png);
+            background-size: cover;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            height: 40px;
+        }
+
+        #header h2 {
+            font-family: 'Solway', serif;
+        }
+
+        .navbar {
+            background-color: #003366;
+            border-radius: 0;
+            border: none;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar-brand:hover {
+            color: #e2e6ea;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .form-group label {
+            font-family: 'Solway', serif;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .custom-control-label {
+            font-family: 'Solway', serif;
+        }
+
+        .card {
+            margin: 20px 0;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .btn-lg {
+            margin-top: 10px;
+        }
+
+        .btn-primary {
+            background-color: #003366;
+            border-color: #003366;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+
+        .btn-primary:hover,
+        .btn-info:hover {
+            background-color: #002244;
+            border-color: #001533;
+        }
+
+        .btn-info:hover {
+            background-color: #138496;
+            border-color: #117a8b;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a href="/home" class="navbar-brand"><b>HOME</b></a>
+        </div>
+    </nav>
+
+    <section id="header" class="jumbotron text-center">
+        <h2 class="display-4" >Enter Your Educational Details</h2>
+    </section>
+
+    <form action='/submit-education' method="POST">
+        <div class="container">
+            <h3>Educational Information</h3>
+
+            <div class="form-group">
+                <label for="name">
+                    <h3>Name:</h3>
+                </label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">
+                    <h3>Date of Birth:</h3>
+                </label>
+                <input type="text" id="dob" name="dob" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="10th-school">
+                    <h3>10th Grade School:</h3>
+                </label>
+                <input type="text" id="10th-school" name="10th-school" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="10th-board">
+                    <h3>10th Grade Board:</h3>
+                </label>
+                <input type="text" id="10th-board" name="10th-board" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="10th-percentage">
+                    <h3>10th Grade Percentage:</h3>
+                </label>
+                <input type="text" id="10th-percentage" name="10th-percentage" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="12th-school">
+                    <h3>12th Grade School:</h3>
+                </label>
+                <input type="text" id="12th-school" name="12th-school" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="12th-board">
+                    <h3>12th Grade Board:</h3>
+                </label>
+                <input type="text" id="12th-board" name="12th-board" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="12th-percentage">
+                    <h3>12th Grade Percentage:</h3>
+                </label>
+                <input type="text" id="12th-percentage" name="12th-percentage" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="current-college">
+                    <h3>Current College/University:</h3>
+                </label>
+                <input type="text" id="current-college" name="current-college" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="current-course">
+                    <h3>Current Course/Program:</h3>
+                </label>
+                <input type="text" id="current-course" name="current-course" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gpa">
+                    <h3>Current GPA/CGPA:</h3>
+                </label>
+                <input type="text" id="gpa" name="gpa" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-courses">
+                    <h3>Additional Courses/Certifications:</h3>
+                </label>
+                <input type="text" id="additional-courses" name="additional-courses" class="form-control" placeholder="Details of additional courses or certifications">
+            </div>
+
+            <div class="form-group">
+                <label for="honors">
+                    <h3>Honors/Awards:</h3>
+                </label>
+                <input type="text" id="honors" name="honors" class="form-control" placeholder="Details of any honors or awards">
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                <button type="reset" class="btn btn-info btn-lg">Reset</button>
+            </div>
+        </div>
+    </form>
+    <script src="dash2.js"></script>
+</body>
+
+</html>
